@@ -1,6 +1,6 @@
 # GULP STARTER
 
-A simple starter with a very basic **gulp file**.
+A simple starter project with a very basic **gulp file**.
 
 Just point your command line to project's directory:
 
