@@ -1,1 +1,1 @@
-var ppl={name:"Paolo",age:35};console.log(ppl.name);
+var myObj={message:"Welcome Gulp!"};console.log(myObj.message);

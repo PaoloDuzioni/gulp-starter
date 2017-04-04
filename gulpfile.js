@@ -9,8 +9,10 @@ var gulp = require('gulp'),                     //gulp.task(), gulp.src(), gilp.
     //SASS
     postcss = require('gulp-postcss'),          //postcss per autoprefixer
     autoprefixer = require('autoprefixer'),     //autoprefixer (vendor prefixing for CSS)
-    sass = require('gulp-sass');                // SASS / SCSS compiler
+    sass = require('gulp-sass'),                // SASS / SCSS compiler
 
+    //BrowserSync
+    browserSync = require('browser-sync');      // Browser auto-refresh
 
 
 /***************************************************************
@@ -21,7 +23,8 @@ var gulp = require('gulp'),                     //gulp.task(), gulp.src(), gilp.
 gulp.task('uglify', function() {
   return gulp.src('app/js/*.js')              //origine
         .pipe(uglify())                       //minifica
-        .pipe(gulp.dest('app/js/min'));       //destinazione
+        .pipe(gulp.dest('app/js/min'))        //destinazione
+        .pipe(browserSync.stream());          //passa lo stream a BrowserSync
 });
 
 
@@ -44,7 +47,8 @@ gulp.task('sass', function() {
 gulp.task('autoprefixer', ['sass'], function() {
   return gulp.src('app/css/*.css')                  //origine
         .pipe(postcss( [ autoprefixer() ] ))        //autoprefixer
-        .pipe(gulp.dest('app/css'));                //destinazione
+        .pipe(gulp.dest('app/css'))                 //destinazione
+        .pipe(browserSync.stream());                //passa lo stream a BrowserSync
 });
 
 
@@ -55,8 +59,15 @@ gulp.task('autoprefixer', ['sass'], function() {
  ***************************************************************/
 
 gulp.task('watch', function(){
+  //sets browsersynch
+  browserSync.init({
+    server: "./app",   //da dove servire i files del progetto
+    notify: false      //niente pop-up di notifica nel browser
+  });
+
   gulp.watch('app/scss/*.scss', ['autoprefixer']);
   gulp.watch('app/js/*.js', ['uglify']);
+  gulp.watch("app/*.html").on('change', browserSync.reload);
 });
 
 

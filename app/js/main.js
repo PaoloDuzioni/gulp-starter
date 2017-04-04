@@ -1,6 +1,5 @@
-var ppl = {
-  name: 'Paolo',
-  age: 35
+var myObj = {
+  message: 'Welcome Gulp!'
 };
 
-console.log(ppl.name); 
+console.log(myObj.message);
