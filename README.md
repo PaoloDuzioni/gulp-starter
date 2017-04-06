@@ -19,9 +19,9 @@ and open your new project in your browser just typing the following command in y
 
 
 #### What this starter includes:
-- SASS / SCSS compiling and minify
+- `.sass` / `.scss` compiling and minify
 - Autoprefixer
-- JavaSCript Minify
+- JavaScript Minify
 - BrowserSync (auto-refresh your browser on file change and synch your project on multiple devices)
 
 

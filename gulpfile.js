@@ -15,6 +15,7 @@ var gulp = require('gulp'),                     //gulp.task(), gulp.src(), gilp.
     browserSync = require('browser-sync');      // Browser auto-refresh
 
 
+
 /***************************************************************
  *    JS TASKS
  ***************************************************************/
@@ -34,9 +35,12 @@ gulp.task('uglify', function() {
  ***************************************************************/
 
 // SASS COMPILING (task che sarà chiamata da 'autoprefixer')
+
+var compDir = 'app/styles/*.sass'; // <--((Change here to .scss or .sass syntax))
+
 gulp.task('sass', function() {
   //importante il 'return' dello stream
-  return gulp.src('app/scss/*.scss')                //origine
+  return gulp.src(compDir)                          //origine
         .pipe(sass({                                //compilazione
           outputStyle: 'compressed'
         }).on('error', sass.logError))
@@ -65,9 +69,9 @@ gulp.task('watch', function(){
     notify: false      //niente pop-up di notifica nel browser
   });
 
-  gulp.watch('app/scss/*.scss', ['autoprefixer']);
+  gulp.watch(compDir, ['autoprefixer']);
   gulp.watch('app/js/*.js', ['uglify']);
-  gulp.watch("app/*.html").on('change', browserSync.reload);
+  gulp.watch("app/*.html").on('change', browserSync.reload);  //ricarica per i file HTML
 });
 
 
