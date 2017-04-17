@@ -1,15 +1,16 @@
 # GULP STARTER
+![version](https://img.shields.io/badge/Task Runner-Gulp-blue.svg)
+![version](https://img.shields.io/badge/Version-1.0.0-green.svg)
 
-A simple starter project with a very basic **gulp file**.
+A simple package with a **gulp file** for front-end development.
 
-<small>*(Under development)*</small>
 
 #### Getting started
-Just point your terminal to project's directory:
+Just point your terminal to this directory:
 
 `cd my-project`
 
-install gulp and all starter's dependencies:
+install gulp and all required dependencies:
 
 `npm init`
 
@@ -18,9 +19,10 @@ and open your new project in your browser just typing the following command in y
 `gulp`
 
 
-#### What this starter includes:
+#### What this package includes:
 - `.sass` / `.scss` compiling and minify
 - Autoprefixer
+- JavaScript Concatenation
 - JavaScript Minify
 - BrowserSync (auto-refresh your browser on file change and synch your project on multiple devices)
 
