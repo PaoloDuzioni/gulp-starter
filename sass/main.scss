@@ -2,17 +2,15 @@
     YOUR MAIN STYLESHEET
  ****************************************************************/
 
-// VARS
-$back-col: #fff;
-$font-col: #555;
-$font-fam: sans-serif;
+// PARTIALS
+@import 'partials/vars-mixins';
 
 
 // GENERAL
 body{
-  margin: 0;
+  margin: 0; 
   padding: 0;
-  font-size: 16;
+  font-size: 16px;
   font-family: $font-fam;
   color: $font-col;
   background: $back-col;
