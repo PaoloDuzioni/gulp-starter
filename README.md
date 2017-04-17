@@ -6,13 +6,13 @@ A simple package with a **gulp file** for front-end development.
 
 
 #### Getting started
-Just point your terminal to this directory:
+Just point your terminal to Gulp Starter directory:
 
 `cd my-project`
 
 install gulp and all required dependencies:
 
-`npm init`
+`npm install`
 
 and open your new project in your browser just typing the following command in your terminal:
 

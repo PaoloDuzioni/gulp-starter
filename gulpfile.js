@@ -24,11 +24,12 @@ var gulp = require('gulp'),                     //gulp.task(), gulp.src(), gilp.
 
 // JS MINIFICATION
 gulp.task('uglify', function() {
-  return gulp.src(['js/*.js', '!js/*.min.js'])    //origine
-        .pipe(concat('main.min.js'))              //concatena
-        .pipe(uglify())                           //minifica
-        .pipe(gulp.dest('js/'))                   //destinazione
-        .pipe(browserSync.stream());              //passa lo stream a BrowserSync
+  //ricorda diu escludere il file minificato .min.js
+  return gulp.src(['./js/*.js', '!./js/*.min.js'])    //L'ordine di concatenazione: ['./js/script-one.js', './js/script-two.js', etc...]
+        .pipe(concat('main.min.js'))                  //concatena
+        .pipe(uglify())                               //minifica
+        .pipe(gulp.dest('./js/'))                     //destinazione
+        .pipe(browserSync.stream());                  //passa lo stream a BrowserSync
 });
 
 
