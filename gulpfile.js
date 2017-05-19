@@ -24,7 +24,7 @@ var gulp = require('gulp'),                     //gulp.task(), gulp.src(), gilp.
 
 // JS MINIFICATION
 gulp.task('uglify', function() {
-  //ricorda diu escludere il file minificato .min.js
+  //ricorda di escludere il file minificato .min.js
   return gulp.src(['./js/*.js', '!./js/*.min.js'])    //L'ordine di concatenazione: ['./js/script-one.js', './js/script-two.js', etc...]
         .pipe(concat('main.min.js'))                  //concatena
         .pipe(uglify())                               //minifica
