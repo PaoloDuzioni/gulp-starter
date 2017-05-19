@@ -1,5 +1,4 @@
 # GULP STARTER
-![version](https://img.shields.io/badge/Task Runner-Gulp-blue.svg)
 ![version](https://img.shields.io/badge/Version-1.0.0-green.svg)
 
 A simple package with a **gulp file** for front-end development.
