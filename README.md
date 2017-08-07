@@ -15,7 +15,7 @@ A simple package with a **gulp file** for front-end development.
 
 1. Download the zip file
 2. Unzip the file and `cd` into the uncompressed folder
-3. Run the following commend in your terminal: `npm install`
+3. Run the following command in your terminal: `npm install`
 
 And you are ready to go! A new browser tab will open with hot reload for html, js and scss file saving. 
 
