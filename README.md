@@ -17,7 +17,7 @@ A simple package with a **gulp file** for front-end development.
 2. Unzip the file and `cd` into the uncompressed folder
 3. Run the following command in your terminal: `npm install`
 
-And you are ready to go! A new browser tab will open with hot reload for html, js and scss file saving. 
+And you are ready to go! A new browser tab will open with hot reload for html, js and scss files. 
 
 Type `ctrl + c` to stop BrowserSync local server.
 
