@@ -5,8 +5,11 @@
 // PARTIALS
 @import 'partials/vars-mixins';
 
-
+ 
 // GENERAL
+*, *::before, *::after{
+  box-sizing: border-box;
+}
 html, body{
   height: 100%;
 }
@@ -26,8 +29,8 @@ body{
 header{
   position: relative;
   text-align: center;
-  border-top: 1px solid #eee;
-  border-bottom: 10px solid #eee;
+  border-top: 1px solid #fff;
+  border-bottom: 10px solid #fff;
   &::before, &::after{
     position: absolute;
     top: 0;
@@ -51,10 +54,10 @@ header{
     margin-left: -30px;
     width: 60px;
     height: 60px;
-    line-height: 62px;
+    line-height: 58px;
     font-size: 1.8em;
     color: #bbb;
-    background: #fff;
+    background: $back-col;
     border: 1px solid #ddd; 
     border-radius: 50%;
     animation: rotateMe 3s linear infinite;
@@ -71,7 +74,7 @@ h1{
 }
 ul{
   list-style-type: none;
-  margin: 3rem 0;
+  margin: 3.35rem 0;
   padding: 0;
   li{
     margin: 0;

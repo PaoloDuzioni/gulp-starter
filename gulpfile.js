@@ -28,7 +28,7 @@ gulp.task('uglify', function() {
   return gulp.src(['./js/*.js', '!./js/*.min.js'])    //L'ordine di concatenazione: ['./js/script-one.js', './js/script-two.js', etc...]
         .pipe(concat('main.min.js'))                  //concatena
         .pipe(uglify())                               //minifica
-        .pipe(gulp.dest('./js/'))                     //destinazione
+        .pipe(gulp.dest('./dist/js/'))                     //destinazione
         .pipe(browserSync.stream());                  //passa lo stream a BrowserSync
 });
 
@@ -48,14 +48,14 @@ gulp.task('sass', function() {
           outputStyle: 'compressed'
         }).on('error', sass.logError))
         .pipe(rename('main.min.css'))                 //rinomina file compilato
-        .pipe(gulp.dest('./css'));                    //destinazione
+        .pipe(gulp.dest('./dist/css'));                    //destinazione
 });
 
 // AUTOPREFIXER (esegui prime la task 'sass')
 gulp.task('autoprefixer', ['sass'], function() {
-  return gulp.src('./css/*.css')                      //origine
+  return gulp.src('./dist/css/*.css')                      //origine
         .pipe(postcss( [ autoprefixer() ] ))          //autoprefixer
-        .pipe(gulp.dest('./css'))                     //destinazione
+        .pipe(gulp.dest('./dist/css'))                     //destinazione
         .pipe(browserSync.stream());                  //passa lo stream a BrowserSync
 });
 
